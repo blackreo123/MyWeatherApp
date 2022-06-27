@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Cc-Gk-nFi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather Widget-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="WorkSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6x-H3-Y3e">
+                                <rect key="frame" x="0.0" y="88" width="414" height="508"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOF-un-VdN" userLabel="contentsView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="508"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SOF-un-VdN" firstAttribute="leading" secondItem="Xew-fn-gaN" secondAttribute="leading" id="EUF-8b-2ZB"/>
+                                    <constraint firstItem="SOF-un-VdN" firstAttribute="top" secondItem="Xew-fn-gaN" secondAttribute="top" id="Oy0-0C-2VR"/>
+                                    <constraint firstItem="SOF-un-VdN" firstAttribute="height" secondItem="lpc-ui-M8k" secondAttribute="height" id="SJ9-aa-swg"/>
+                                    <constraint firstItem="SOF-un-VdN" firstAttribute="width" secondItem="lpc-ui-M8k" secondAttribute="width" priority="250" id="fug-Rd-eQY"/>
+                                    <constraint firstItem="SOF-un-VdN" firstAttribute="height" secondItem="Xew-fn-gaN" secondAttribute="height" id="k1o-9Y-1yP"/>
+                                    <constraint firstItem="SOF-un-VdN" firstAttribute="trailing" secondItem="Xew-fn-gaN" secondAttribute="trailing" id="kPQ-Su-kHQ"/>
+                                    <constraint firstItem="SOF-un-VdN" firstAttribute="bottom" secondItem="Xew-fn-gaN" secondAttribute="bottom" id="oqA-U5-z01"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Xew-fn-gaN"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="lpc-ui-M8k"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5C-mV-IlE">
+                                <rect key="frame" x="16" y="662" width="382" height="50"/>
+                                <color key="backgroundColor" name="AccentGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="URT-Uz-nv0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Change Background">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="photo.artframe" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="changBackgroundButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dEu-3t-ySN"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="v9v-V3-Mt9">
+                                <rect key="frame" x="149.5" y="606" width="115.5" height="26"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNz-3A-0Y2">
+                                <rect key="frame" x="16" y="720" width="382" height="50"/>
+                                <color key="backgroundColor" name="AccentGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NVK-cg-0B7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Background Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backgroundResetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OIt-XF-YMz"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nwj-oj-1sk">
+                                <rect key="frame" x="16" y="778" width="382" height="51"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWf-ur-hTS">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="51"/>
+                                        <color key="backgroundColor" name="AccentGreen"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Text White">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="textWhiteButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9si-Jm-NWc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQc-pg-i5F">
+                                        <rect key="frame" x="195" y="0.0" width="187" height="51"/>
+                                        <color key="backgroundColor" name="AccentGreen"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Text Black">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="textBlackButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0mh-nl-oh1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="mY1-UT-Rvh"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="LightSand"/>
+                        <constraints>
+                            <constraint firstItem="uNz-3A-0Y2" firstAttribute="trailing" secondItem="e5C-mV-IlE" secondAttribute="trailing" id="1PW-Am-8BV"/>
+                            <constraint firstItem="u6x-H3-Y3e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2aP-De-sw4"/>
+                            <constraint firstItem="u6x-H3-Y3e" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6Lm-x6-7FZ"/>
+                            <constraint firstItem="v9v-V3-Mt9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DCV-gi-EaJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e5C-mV-IlE" secondAttribute="trailing" constant="16" id="FDM-Ti-WE8"/>
+                            <constraint firstItem="u6x-H3-Y3e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nls-0t-TZs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="e5C-mV-IlE" secondAttribute="bottom" constant="150" id="Ozz-a6-NA6"/>
+                            <constraint firstItem="e5C-mV-IlE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QAY-0W-GlF"/>
+                            <constraint firstItem="v9v-V3-Mt9" firstAttribute="top" secondItem="u6x-H3-Y3e" secondAttribute="bottom" constant="10" id="Tzy-Yu-QkR"/>
+                            <constraint firstItem="uNz-3A-0Y2" firstAttribute="leading" secondItem="e5C-mV-IlE" secondAttribute="leading" id="VSL-3P-cj1"/>
+                            <constraint firstItem="nwj-oj-1sk" firstAttribute="trailing" secondItem="uNz-3A-0Y2" secondAttribute="trailing" id="ZQr-69-n0N"/>
+                            <constraint firstItem="e5C-mV-IlE" firstAttribute="top" secondItem="v9v-V3-Mt9" secondAttribute="bottom" constant="30" id="eBq-90-J41"/>
+                            <constraint firstItem="uNz-3A-0Y2" firstAttribute="top" secondItem="e5C-mV-IlE" secondAttribute="bottom" constant="8" symbolic="YES" id="jNt-Xw-i6o"/>
+                            <constraint firstItem="nwj-oj-1sk" firstAttribute="leading" secondItem="uNz-3A-0Y2" secondAttribute="leading" id="kjM-6S-sLg"/>
+                            <constraint firstItem="nwj-oj-1sk" firstAttribute="top" secondItem="uNz-3A-0Y2" secondAttribute="bottom" constant="8" symbolic="YES" id="r4T-J1-0w5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Weather Widget" id="1VQ-9N-aeF"/>
+                    <connections>
+                        <outlet property="backgroundResetButton" destination="uNz-3A-0Y2" id="6S6-jX-cyf"/>
+                        <outlet property="changeBackgroundButton" destination="e5C-mV-IlE" id="MDL-Lf-2zb"/>
+                        <outlet property="contentsView" destination="SOF-un-VdN" id="ono-BX-Gqj"/>
+                        <outlet property="pageControl" destination="v9v-V3-Mt9" id="rqO-Jq-YqX"/>
+                        <outlet property="scrollView" destination="u6x-H3-Y3e" id="0m5-na-7yA"/>
+                        <outlet property="textBlackButton" destination="WQc-pg-i5F" id="uYn-KP-7Bl"/>
+                        <outlet property="textWhiteButton" destination="IWf-ur-hTS" id="YWa-WN-pEI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="104.46428571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="d1p-7Q-tAd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Cc-Gk-nFi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vmz-qN-8wN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1jI-mU-0eZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14q-sU-4uK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="104.46428571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <namedColor name="AccentGreen">
+            <color red="0.33300000429153442" green="0.67100000381469727" blue="0.40400001406669617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightSand">
+            <color red="0.94509803921568625" green="0.93725490196078431" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
